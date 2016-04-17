@@ -658,8 +658,7 @@ input[type='reset'].success:hover {
 }
 .questions-tree .multiple-choice button i {
   font-size: 70px;
-  line-height: 0;
-  margin: -10px 10px -10px -30px;
+  margin: -40px 10px -10px -30px;
   position: relative;
   top: 23px;
   opacity: 0.7;
@@ -698,7 +697,6 @@ input[type='reset'].success:hover {
 .icon-chili {
   color: #e86456;
   font-size: 60px;
-  line-height: 0;
   margin: -10px 10px -10px -30px;
   position: relative;
   top: 19px;
