@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "npm run build; npm run icons",
     "start": "babel-node server/index.js",
-    "icons": "mkdir -p wwww/icons; icon-font-generator icons/*.svg -o www/icons --prefix icon",
+    "icons": "mkdir -p ./www/icons; icon-font-generator icons/*.svg -o www/icons --prefix icon",
     "server-watch": "nodemon --watch ./server --exec 'npm start'",
     "build": "jade client/view -o www; browserify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js; stylus -u nib -u griddy client/style/index.styl -o www/css/styles.css",
     "watch": "jade client/view -o www -w | watchify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js | stylus -u nib -u griddy client/style/index.styl -w -o www/css/styles.css | livereload www"
