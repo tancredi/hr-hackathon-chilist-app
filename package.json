@@ -24,6 +24,7 @@
     "clone": "^1.0.2",
     "config": "^1.20.1",
     "griddy": "^1.0.1",
+    "icon-font-generator": "^1.0.2",
     "jade": "^1.11.0",
     "koa": "^1.2.0",
     "koa-body": "^1.4.0",
