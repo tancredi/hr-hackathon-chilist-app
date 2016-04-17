@@ -1,4 +1,4 @@
-import config from 'config-heroku';
+import config from 'config';
 import http from 'http';
 import app from './app';
 import db from './core/db';
