@@ -4,7 +4,7 @@
   "description": "Barebone matching prototype for tech talent",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "npm run build; npm run icons",
     "start": "babel-node server/index.js",
     "icons": "icon-font-generator icons/*.svg -o www/icons --prefix icon",
     "server-watch": "nodemon --watch ./server --exec 'npm start'",
