@@ -1,5 +1,7 @@
 # Chilist App
 
+![Screenshot](http://i.cubeupload.com/kEcIm5.png)
+
 > Stripped-down matching product for tech
 
 ## Try it!
@@ -50,4 +52,4 @@ To watch the client
 
 ## License
 
-Copyright (c) 2016 WorkShape.io - Released under the MIT license
+Copyright (c) 2016 WorkShape.io - Released under the [MIT](https://github.com/tancredi/hr-hackathon-chilist-app/blob/master/LICENSE) license
