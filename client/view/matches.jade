@@ -1,0 +1,14 @@
+.page-width
+
+    h2 Your post
+
+    .self: sequence-display(:parts='post.parts', v-if='post')
+
+    h2 Matches ({{ loading ? "Loading..." : matches.length }})
+
+    .empty(v-if='!matches.length && !loading') No matches found&hellip;
+
+    match-display(:match='match', v-for='match in matches')
+
+    br
+    br

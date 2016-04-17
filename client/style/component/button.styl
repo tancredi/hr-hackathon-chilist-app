@@ -1,0 +1,50 @@
+button-color(base-color = color-black, text-color = color-white)
+    background-color base-color
+    color text-color
+    // box-shadow rgba(color-white, .2) 0 1px 0 0 inset
+    border-color @background-color
+
+    &:hover
+        background-color lighten(base-color, 10)
+        border-color @background-color
+
+button, .button, input[type='submit'], input[type='reset']
+    vertical-rhythm()
+    button-color()
+    border-radius()
+    smooth-font()
+    cursor pointer
+    padding 10px 20px
+    display inline-block
+    box-sizing border-box
+    font-size 14px
+    transition background-color .2s
+    border-width 1px
+    border-style solid
+    margin-right 10px
+    font-family font-base
+
+    &.small
+        padding 8px 10px
+        font-size 11px
+
+    &.large
+        padding 20px 30px
+        font-size 20px
+
+    &:last-child
+        margin-right 0
+
+    &.block
+        display block
+        width 100%
+
+    for key in palette-colors
+        &.color-{key}
+            button-color(palette-colors[key])
+
+    &.disabled
+        button-color(#ccc, #999)
+
+    &.success
+        button-color(color-success)

@@ -1,0 +1,36 @@
+tag-color(base-color)
+    border-radius()
+    // background base-color
+    // color color-white
+    margin -10px 3px
+    margin -10px 0
+    color base-color
+    font-weight bold
+
+.sequence-display
+    border-radius()
+    vertical-rhythm()
+    background #fff
+    display inline-block
+    padding 20px
+
+    span
+        font-family font-base
+        display inline-block
+        padding 3px
+        margin -(@padding)
+        color #999
+
+        for key in palette-colors
+
+            &.color-{key}
+                tag-color(palette-colors[key])
+
+.self .sequence-display
+    opacity .5
+    margin-bottom 20px
+    font-style italic
+    transition opacity .2s
+
+    &:hover
+        opacity 1

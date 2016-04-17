@@ -1,0 +1,42 @@
+{
+  "name": "jobboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "babel-node server/index.js",
+    "icons": "icon-font-generator icons/*.svg -o www/icons --prefix icon",
+    "server-watch": "nodemon --watch ./server --exec 'npm start'",
+    "build": "jade client/view -o www; browserify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js; stylus -u nib -u griddy client/style/index.styl -o www/css/styles.css",
+    "watch": "jade client/view -o www -w | watchify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js | stylus -u nib -u griddy client/style/index.styl -w -o www/css/styles.css | livereload www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api-service": "^1.0.7",
+    "babel-cli": "^6.7.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "browserify-plain-jade": "^0.2.2",
+    "clone": "^1.0.2",
+    "config": "^1.20.1",
+    "griddy": "^1.0.1",
+    "jade": "^1.11.0",
+    "koa": "^1.2.0",
+    "koa-body": "^1.4.0",
+    "koa-logger": "^1.3.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0",
+    "livereload": "^0.4.1",
+    "mongoose": "^4.4.12",
+    "nib": "^1.1.0",
+    "nodemon": "^1.9.1",
+    "routy": "^0.1.8",
+    "stylus": "^0.54.2",
+    "vue": "^1.0.21",
+    "watchify": "^3.7.0"
+  }
+}

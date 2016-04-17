@@ -1,0 +1,21 @@
+# Node
+node_modules
+npm-debug.log
+
+# App
+config
+!config/default.json
+!config/custom-environment-variables.json
+
+# Build
+www/js/*.js
+!www/js/vendor
+www/*.css
+www/*.html
+www/**.html
+www/***.html
+www/icons
+!www/icons/.gitkeep
+
+# OSX
+**/.DS_Store

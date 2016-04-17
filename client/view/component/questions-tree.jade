@@ -1,0 +1,29 @@
+.questions-tree(v-if='step && context')
+
+    .multiple-choice(v-if='step.type === "multiple-choice"')
+
+        h4.light(v-if='context.question && !context.hide_question') {{ context.question | upper-first }}
+
+        button.choice.large(
+            v-for='choice in context.choices',
+            class='{{ "color-" + choice.color }}',
+            v-on:click='next(choice.value, formSequence(step.type, context, choice))'
+            )
+            i(class='icon-{{ choice.value }}') 
+            | {{ choice.label | upper-first }}
+
+    .multiple-select(v-if='step.type === "multiple-select"')
+
+        h4.light(v-if='context.question') {{ context.question | upper-first }}
+
+        button.choice(
+            v-for='choice in context.choices',
+            class='{{ choice.active ? "color-" + choice.color : "disabled" }}',
+            v-on:click='choice.active = !choice.active'
+            )
+            i(class='icon-{{ choice.value }}') 
+            | {{ choice.label | upper-first }}
+
+        br
+
+        button(v-if='getActive(context.choices).length', v-on:click='next(getActive(context.choices), formSequence(step.type, context, getActive(context.choices, true)))') Next

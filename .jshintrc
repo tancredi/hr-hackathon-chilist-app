@@ -1,0 +1,8 @@
+{
+    "node"         : true,
+    "globals"      : {},
+    "strict"       : false,
+    "undef"        : true,
+    "unused"       : true,
+    "noyield"      : true
+}

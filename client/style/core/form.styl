@@ -1,0 +1,31 @@
+input[type='text']
+input[type='email']
+input[type='password']
+input[type='number']
+select
+textarea
+    border-radius()
+    background color-white
+    border 1px solid #ddd
+    padding 15px
+    box-sizing border-box
+    margin-bottom 10px
+    font-size 18px
+    font-family font-base
+    transition border-color .2s
+
+    &.block
+        width 100%
+        display block
+
+    &:focus
+        outline 0
+        border-color color-brand
+
+    &[disabled]
+        opacity .5
+        background color-gray-lighter
+        border 0
+
+    &:-moz-ui-invalid
+        box-shadow none

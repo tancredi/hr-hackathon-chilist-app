@@ -1,0 +1,23 @@
+.page-width: .questions-view
+
+    .splash(v-if='!closeSplash')
+        h2 Tech matches, the easy way
+        h4 Match to tech roles, in a few clicks
+
+    h2(v-if='step === 2') Submit
+
+    sequence-display(:parts='sequence', v-if='sequence.length')
+
+    div(v-on:click='closeSplash = true'): questions-tree(:answers='answers', :tree='tree', :done='answered', v-if='step === 1', :sequence='sequence')
+
+    form.capture-details(v-if='step === 2', v-on:submit='submit($event)')
+
+        input.large.block(type='text', placeholder='Your name', , v-model='name', v-if='answers.type === "developer"', required)
+        input.large.block(type='text', placeholder='Company name', , v-model='name', v-if='answers.type === "hirer"', required)
+        input.large.block(type='text', placeholder='{{ answers.channel | upper-first }} URL', v-model='url', v-if='answers.type === "developer"', required)
+        input.large.block(type='text', placeholder='Website URL', , v-model='url', v-if='answers.type === "hirer"', required)
+        input.large.block(type='email', placeholder='Email address', v-model='email', required)
+
+        button.green.large.block(type='submit')
+            i.icon-chili 
+            | Submit

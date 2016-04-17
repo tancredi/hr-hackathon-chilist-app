@@ -1,0 +1,5 @@
+.sequence-display
+
+    template(v-for='(i, part) in parts')
+        template(v-if='part.prefix') {{ part.prefix }}
+        span.tag(class='{{ "color-" + part.color }}') {{ part.text }}

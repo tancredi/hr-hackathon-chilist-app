@@ -1,0 +1,17 @@
+.match-display
+
+    .header
+
+        h4.light {{ match.post.name }}
+
+    sequence-display(:parts='match.post.parts')
+
+    .footer
+
+        .section.score
+            span Score: 
+            | {{ match.score }}
+
+        .section: a.button.small(href='{{ match.post.url }}', target='_blank') {{ match.post.values.channel ?  match.post.values.channel : "Website" | upper-first }}
+
+        .section: a.button.small(href='mailto:{{ match.post.url }}') Contact
