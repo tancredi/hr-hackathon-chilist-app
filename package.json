@@ -1,7 +1,7 @@
 {
-  "name": "jobboard",
+  "name": "chilist",
   "version": "1.0.0",
-  "description": "",
+  "description": "Barebone matching prototype for tech talent",
   "main": "index.js",
   "scripts": {
     "postinstall": "npm run build",
@@ -11,8 +11,8 @@
     "build": "jade client/view -o www; browserify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js; stylus -u nib -u griddy client/style/index.styl -o www/css/styles.css",
     "watch": "jade client/view -o www -w | watchify -v -t browserify-plain-jade -t babelify client/lib/index.js -o www/js/index.js | stylus -u nib -u griddy client/style/index.styl -w -o www/css/styles.css | livereload www"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tancredi Trugenberger",
+  "license": "MIR",
   "dependencies": {
     "api-service": "^1.0.7",
     "babel-cli": "^6.7.5",
