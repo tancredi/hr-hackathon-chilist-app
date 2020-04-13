@@ -1,6 +1,6 @@
 {
   "name": "chilist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Barebone matching prototype for tech talent",
   "main": "index.js",
   "scripts": {
