@@ -32,7 +32,7 @@
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "livereload": "^0.4.1",
-    "mongoose": "^4.4.12",
+    "mongoose": "^5.9.9",
     "nib": "^1.1.0",
     "nodemon": "^1.9.1",
     "routy": "^0.1.8",
